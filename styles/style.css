@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #4E69E0;
+    --corpo: #222D61;
+    --login: #080f4e;
+    --fonte-login: #95A4E6;
+    --fonte-texto: #546fe9;
+}
+
+body {
+    font-family: 'popins', helvetica, sans-serif;
+    background-color: var(--fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90vw;
+    background-color: var(--corpo);
+    padding: 4vw;
+    border-radius: 50px;
+}
+
+main img {
+    width: 20vw;
+    transition: all 1s ease-in-out;
+}
+
+main img:hover {
+    transition: all 1s ease-in-out;
+    transform: translateY(-1vw);
+}
+
+section#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+
+section > h1 {
+    color: var(--fonte-texto);
+    font-size: 3vw;
+}
+/*Fim da Primeira Parte*/
+
+.login {
+    background-color: var(--login);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vw;
+    padding: 2vw;
+    width: 25vw;
+    border-radius: 20px;
+}
+
+article > h2 {
+    color: var(--fonte-login);
+    font-size: 2vw;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1vw;
+    color: lightgray;
+    gap: 1vw;
+}
+
+input {
+    padding: 1.2vw;
+    outline: none;
+    border-radius: 10px;
+}
+
+input.digita {
+    background-color: #3C4266;
+    color: white;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+input.digita:focus {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+}
+
+input.botao {
+    margin-top: 2vw;
+    width: 80%;
+    background-color: var(--fonte-login);
+    font-weight: bold;
+    border: none;
+}
+
+input.botao:hover {
+    cursor: pointer;
+}
+
+input.botao:active {
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.445);
+}
+
+@media screen and (max-width: 750px) {
+    main {
+        flex-direction: column;
+    }
+
+    section > h1 {
+        font-size: 2vh;
+    }
+
+    .login {
+        width: 70vw;
+        height: 50vh;
+    }
+
+    article > h2 {
+        font-size: 2vh;
+    }
+
+    main img {
+        width: 30vw;
+    }
+}
